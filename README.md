@@ -54,7 +54,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 - **Start ARP Poisoning:** Click "Start ARP Poisoning" to initiate the attack.
 - **Stop ARP Poisoning**: If you need to stop the attack, click the "Stop ARP Poisoning" button. This will safely terminate the ARP poisoning process.
 - **Open Wireshark**: Launch Wireshark to capture and analyze network packets. Select the network interface in Wireshark and start capturing to observe the network traffic between the target and gateway. Look for ARP requests, replies, and other intercepted packets.
-- 
+  
  ## GUI Overview
 
 - **Title**: Displays "NetRaptor" as the tool name.
