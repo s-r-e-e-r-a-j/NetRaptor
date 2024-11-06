@@ -6,7 +6,7 @@ NetRaptor is a GUI-based ARP poisoning tool built with Python that allows you to
 
 - **Network Scanning**: Scan for hosts on a specified network range.
 - **Target and Gateway Selection**: Easily select a target and gateway IP from discovered devices or manually enter a gateway IP.
-gatewayip is your router ipaddress
+gateway ip is your router ipaddress
 
 - **ARP Poisoning**: Perform ARP poisoning to initiate a MITM attack.
 - **Packet Analysis with Wireshark**: Use Wireshark to capture and analyze network traffic.
@@ -28,8 +28,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
     pip3 install scapy
   ```
   ## Usage
-  
-  1. Clone the Repository:
+   1. Clone the Repository:
 
   
 
