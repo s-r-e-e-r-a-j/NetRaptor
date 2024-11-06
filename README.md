@@ -24,7 +24,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 - **Wireshark (optional)**: For analyzing network packets
 
 - ## Install Dependencies
-- ```bash
+ ```bash
     pip3 install scapy
   ```
   ## Usage
