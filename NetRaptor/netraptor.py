@@ -18,7 +18,7 @@ class NetRaptorApp:
         tk.Label(root, text="This tool is made by Sreeraj", font=("Helvetica", 8)).pack()
         
         # Network Range Input
-        tk.Label(root, text="Enter Network Range (e.g., 192.168.1.1/24):").pack(pady=10)
+        tk.Label(root, text="Enter Network Range (e.g., 192.168.1.0/24):").pack(pady=10)
         self.network_entry = tk.Entry(root, width=30)
         self.network_entry.pack()
 
