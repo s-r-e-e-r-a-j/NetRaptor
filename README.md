@@ -6,6 +6,8 @@ NetRaptor is a GUI-based ARP poisoning tool built with Python that allows you to
 
 - **Network Scanning**: Scan for hosts on a specified network range.
 - **Target and Gateway Selection**: Easily select a target and gateway IP from discovered devices or manually enter a gateway IP.
+gatewayip is your router ipaddress
+
 - **ARP Poisoning**: Perform ARP poisoning to initiate a MITM attack.
 - **Packet Analysis with Wireshark**: Use Wireshark to capture and analyze network traffic.
 - **User-Friendly GUI**: Built with Tkinter for easy interaction.
@@ -29,6 +31,8 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
   
   1. Clone the Repository:
 
+  
+
   ```bash
   https://github.com/s-r-e-e-r-a-j/NETRAPTOR-TOOL.git
   ```
@@ -44,9 +48,9 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 ```
 ## Instructions:
 
-- **Enter Network Range**: Specify the network range (e.g., 192.168.1.1/24) to scan.
+- **Enter Network Range**: Specify the network range (e.g., 192.168.1.0/24) to scan.
 - **Scan for Hosts**: Click "Scan for Hosts" to discover devices on the network.
-- **Select Target and Gateway**: Choose a target device and a gateway device from the dropdown menus, or manually enter a gateway IP if it’s not listed.
+- **Select Target and Gateway**: Choose a target device and a gateway device from the dropdown menus, or manually enter a gateway IP if it’s not listed.gateway ip is your router ipaddress 
 - **Start ARP Poisoning:** Click "Start ARP Poisoning" to initiate the attack.
 - **Stop ARP Poisoning**: If you need to stop the attack, click the "Stop ARP Poisoning" button. This will safely terminate the ARP poisoning process.
 - **Open Wireshark**: Launch Wireshark to capture and analyze network packets. Select the network interface in Wireshark and start capturing to observe the network traffic between the target and gateway. Look for ARP requests, replies, and other intercepted packets.
@@ -57,7 +61,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 - **Network Range Input**: Enter the network range to scan.
 - **Scan Button**: Begins network scanning to discover hosts.
 - **Target Dropdown**: Lists discovered hosts for target selection.
-- **Gateway Dropdown**: Lists discovered hosts for gateway selection or allows manual entry.
+- **Gateway Dropdown**: Lists discovered hosts for gateway selection or allows manual entry.gateway ip is your router ipaddress 
 - **Start ARP Poisoning Button**: Starts the ARP poisoning attack on the selected target and gateway.
 - **Stop ARP Poisoning Button**: Stops the ARP poisoning attack once it has started.
 - **Wireshark**: Use Wireshark in parallel to monitor and analyze network traffic during the attack.
