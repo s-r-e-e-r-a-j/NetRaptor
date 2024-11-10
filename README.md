@@ -32,7 +32,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 
 - ## Install Dependencies
  ```bash
-    pip3 install scapy
+    pip3 install -r requirements.txt
   ```
   ## Usage
 
