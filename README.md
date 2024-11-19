@@ -44,7 +44,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
   https://github.com/s-r-e-e-r-a-j/NETRAPTOR-TOOL.git
   ```
   ```bash
-  cd NETRAPTOR-TOOL
+  cd NetRaptor
   ```
   ```bash
   cd NetRaptor
