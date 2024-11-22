@@ -49,9 +49,16 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
   ```bash
   cd NetRaptor
   ```
- 2. Run the Tool:
+
+2. install the tool:
+   ```bash
+     sudo python3 install.py
+   ```
+   Then Type `y` for Install
+   
+ 3. Run the Tool:
   ```bash
-  sudo python3 netraptor.py
+  sudo netraptor
 ```
 ## Instructions:
 
@@ -72,6 +79,19 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 - **Start ARP Poisoning Button**: Starts the ARP poisoning attack on the selected target and gateway.
 - **Stop ARP Poisoning Button**: Stops the ARP poisoning attack once it has started.
 - **Wireshark**: Use Wireshark in parallel to monitor and analyze network traffic during the attack.
+
+## uninstalling
+
+```bash
+ cd NetRaptor
+```
+```bash
+ cd NetRaptor
+```
+```bash
+sudo python3 install.py
+```
+Then Type `n` for uninstall
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
