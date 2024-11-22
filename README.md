@@ -80,7 +80,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 - **Stop ARP Poisoning Button**: Stops the ARP poisoning attack once it has started.
 - **Wireshark**: Use Wireshark in parallel to monitor and analyze network traffic during the attack.
 
-## uninstalling
+## uninstallation
 
 ```bash
  cd NetRaptor
