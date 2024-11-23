@@ -51,9 +51,9 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
   ```
 
 2. install the tool:
-   ```bash
-     sudo python3 install.py
-   ```
+ ```bash
+  sudo python3 install.py
+  ```
    Then Type `y` for Install
    
  3. Run the Tool:
