@@ -32,7 +32,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 
 - ## Install Dependencies
  ```bash
-    pip3 install -r requirements.txt
+pip3 install -r requirements.txt
   ```
   ## Usage
 
@@ -52,7 +52,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 
 2. install the tool:
  ```bash
-  sudo python3 install.py
+ sudo python3 install.py
   ```
    Then Type `y` for Install
    
