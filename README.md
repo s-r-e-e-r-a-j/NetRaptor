@@ -83,10 +83,10 @@ pip3 install -r requirements.txt
 ## uninstallation
 
 ```bash
- cd NetRaptor
+cd NetRaptor
 ```
 ```bash
- cd NetRaptor
+cd NetRaptor
 ```
 ```bash
 sudo python3 install.py
