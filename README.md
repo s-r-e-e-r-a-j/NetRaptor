@@ -43,7 +43,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
   ```bash
   cd NetRaptor
   ```
-2.Install required libraries 
+2. Install required libraries 
 
 ```bash
 pip3 install -r requirements.txt
