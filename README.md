@@ -30,10 +30,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 - **Tkinter**: For GUI (usually included with Python by default).
 - **Wireshark (optional)**: For analyzing network packets
 
-- ## Install Dependencies
- ```bash
-pip3 install -r requirements.txt
-  ```
+  
   ## Usage
 
 1. Clone the Repository:
@@ -45,6 +42,11 @@ pip3 install -r requirements.txt
   ```
   ```bash
   cd NetRaptor
+  ```
+2.Install required libraries 
+
+```bash
+pip3 install -r requirements.txt
   ```
   ```bash
   cd NetRaptor
