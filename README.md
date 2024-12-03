@@ -52,13 +52,13 @@ pip3 install -r requirements.txt
   cd NetRaptor
   ```
 
-2. install the tool:
+3. install the tool:
  ```bash
  sudo python3 install.py
   ```
    Then Type `y` for Install
    
- 3. Run the Tool:
+ 4. Run the Tool:
   ```bash
   sudo netraptor
 ```
