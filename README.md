@@ -48,11 +48,12 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 ```bash
 pip3 install -r requirements.txt
   ```
-  ```bash
-  cd NetRaptor
-  ```
+  
 
 3. install the tool:
+ ```bash
+  cd NetRaptor
+  ```
  ```bash
  sudo python3 install.py
   ```
