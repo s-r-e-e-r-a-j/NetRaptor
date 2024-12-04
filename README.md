@@ -33,33 +33,35 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
   
   ## Usage
 
-1. Clone the Repository:
+1. **Clone the Repository:**
 
   
 
   ```bash
   git clone https://github.com/s-r-e-e-r-a-j/NetRaptor.git
   ```
+2. **Navigate to the NetRaptor directory**
   ```bash
   cd NetRaptor
   ```
-2. Install required libraries 
+3. **Install required libraries** 
 
 ```bash
 pip3 install -r requirements.txt
   ```
   
 
-3. install the tool:
+4. **Navigate to the NetRaptor directory**:
  ```bash
   cd NetRaptor
   ```
+5. **install the tool**
  ```bash
  sudo python3 install.py
   ```
    Then Type `y` for Install
    
- 4. Run the Tool:
+ 6. **Run the Tool:**
   ```bash
   sudo netraptor
 ```
