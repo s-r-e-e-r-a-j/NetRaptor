@@ -1,5 +1,5 @@
-#copyright of Sreeraj,2024
-#https://github.com/s-r-e-e-r-a-j
+# copyright of Sreeraj,2024
+# https://github.com/s-r-e-e-r-a-j
 
 import os
 import tkinter as tk
