@@ -4,7 +4,8 @@
 import os
 import tkinter as tk
 from tkinter import messagebox
-from scapy.all import ARP, Ether, srp, send
+from scapy.layers.l2 import ARP, Ether
+from scapy.sendrecv import srp, send
 import threading
 import time
 
