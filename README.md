@@ -31,7 +31,7 @@ Warning: This tool is for educational purposes and authorized testing only. Unau
 - **Wireshark (optional)**: For analyzing network packets
 
   
-  ## Usage
+  ## Installation 
 
 1. **Clone the Repository:**
 
