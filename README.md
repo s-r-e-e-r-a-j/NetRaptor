@@ -104,5 +104,4 @@ Then Type `n` for uninstall
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Credits
-Created by Sreeraj
+
