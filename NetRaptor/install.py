@@ -3,7 +3,7 @@ choice = input('[+] to install press (Y) to uninstall press (N) >> ')
 run = os.system
 if str(choice) =='Y' or str(choice)=='y':
 
-    run('chmod 777 netraptor.py')
+    run('chmod 755 netraptor.py')
     run('mkdir /usr/share/netraptor')
     run('cp netraptor.py /usr/share/netraptor/netraptor.py')
 
