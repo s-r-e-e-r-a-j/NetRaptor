@@ -24,6 +24,9 @@ gateway ip is your router ipaddress
 
 Warning: This tool is for educational purposes and authorized testing only. Unauthorized use is illegal and unethical. Ensure you have permission to test on any network before using this tool.
 
+## Compatibility
+- Linux (Debian, RedHat, Arch)
+  
 ## Requirements
 - **Python 3.x**
 - **Scapy**: For network packet manipulation.
