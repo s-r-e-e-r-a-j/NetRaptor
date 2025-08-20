@@ -1,5 +1,5 @@
-# copyright © Sreeraj, 2024
-# https://github.com/s-r-e-e-r-a-j
+# Developer: Sreeraj
+# GitHub: https://github.com/s-r-e-e-r-a-j
 
 import os
 import tkinter as tk
@@ -175,3 +175,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
