@@ -191,9 +191,7 @@ class NetRaptorApp:
 
         self.attack_button.config(state=tk.NORMAL)
         self.stop_button.config(state=tk.DISABLED)
-
-        if self.attack_thread and self.attack_thread.is_alive():
-             messagebox.showinfo("Attack Stopped", "ARP poisoning stopped and ARP tables restored.")
+        messagebox.showinfo("Attack Stopped", "ARP poisoning stopped and ARP tables restored.")
 
    
     def arp_poison(self, target_ip, target_mac, gateway_ip):
@@ -230,6 +228,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
 
