@@ -109,7 +109,7 @@ class NetRaptorApp:
         arp = ARP(pdst=network_range)
         ether = Ether(dst="ff:ff:ff:ff:ff:ff")
         packet = ether / arp
-        result = srp(packet, timeout=3, verbose=0)[0]
+        result = srp(packet, timeout=3, verbose=0, retry=2)[0]
         
         # Clear the host and gateway dropdowns and update them with discovered hosts
         self.host_dropdown['menu'].delete(0, 'end')
@@ -228,4 +228,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
