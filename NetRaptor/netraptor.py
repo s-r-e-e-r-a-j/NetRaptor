@@ -72,6 +72,17 @@ class NetRaptorApp:
         self.attack_thread = None
         self.running = False
 
+   def get_mac(ip):
+        # Send ARP request to get MAC address of given IP"""
+        arp_request = ARP(pdst=ip)
+        broadcast = Ether(dst="ff:ff:ff:ff:ff:ff")
+        packet = broadcast / arp_request
+        answered, _ = srp(packet, timeout=2, verbose=0)
+        if answered:
+           return answered[0][1].hwsrc
+        else:
+             return None
+
     def scan_network(self):
         network_range = self.network_entry.get()
         if not network_range:
@@ -193,6 +204,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
 
