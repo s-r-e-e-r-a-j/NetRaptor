@@ -72,7 +72,7 @@ class NetRaptorApp:
         self.attack_thread = None
         self.running = False
 
-   def get_mac(ip):
+    def get_mac(ip):
         # Send ARP request to get MAC address of given IP"""
         arp_request = ARP(pdst=ip)
         broadcast = Ether(dst="ff:ff:ff:ff:ff:ff")
@@ -204,6 +204,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
 
