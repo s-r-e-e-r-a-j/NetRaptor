@@ -15,7 +15,7 @@ gateway ip is your router ipaddress
 
 ## Disclaimer
 
-Warning: This tool is for educational purposes and authorized testing only. Unauthorized use is illegal and unethical. Ensure you have permission to test on any network before using this tool.
+NetRaptor is developed strictly for educational purposes and authorized penetration testing only. Using this tool to perform ARP poisoning or Man-in-the-Middle (MITM) attacks on networks without explicit permission is illegal and unethical. The author does not take any responsibility for misuse of this tool. By using NetRaptor, you agree that you are solely responsible for your actions and will only use it in controlled environments, such as labs or systems for which you have explicit authorization.
 
 ## Compatibility
 - Linux (Debian, RedHat, Arch)
