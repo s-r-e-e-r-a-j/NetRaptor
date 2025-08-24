@@ -72,7 +72,7 @@ class NetRaptorApp:
         self.attack_thread = None
         self.running = False
 
-    def get_mac(ip):
+    def get_mac(self, ip):
         # Send ARP request to get MAC address of given IP"""
         arp_request = ARP(pdst=ip)
         broadcast = Ether(dst="ff:ff:ff:ff:ff:ff")
@@ -171,7 +171,7 @@ class NetRaptorApp:
             gateway_ip, gateway_mac = gateway.split(" ")[0], gateway.split(" ")[1].strip("()")
         else:
             gateway_ip = self.gateway_entry.get()
-            gateway_mac = get_mac(gateway_ip)
+            gateway_mac = self.get_mac(gateway_ip)
 
         if gateway_ip and gateway_mac:
             self.restore_network(target_ip, target_mac, gateway_ip, gateway_mac)
@@ -184,7 +184,7 @@ class NetRaptorApp:
     
     def arp_poison(self, target_ip, target_mac, gateway_ip):
         
-        gateway_mac = get_mac(gateway_ip)
+        gateway_mac = self.get_mac(gateway_ip)
         if not gateway_mac:
             messagebox.showerror("Error", f"Could not resolve MAC for gateway {gateway_ip}")
             self.running = False
@@ -215,6 +215,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
 
