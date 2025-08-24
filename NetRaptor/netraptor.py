@@ -90,7 +90,7 @@ class NetRaptorApp:
         arp_request = ARP(pdst=ip)
         broadcast = Ether(dst="ff:ff:ff:ff:ff:ff")
         packet = broadcast / arp_request
-        answered, _ = srp(packet, timeout=2, verbose=0)
+        answered, _ = srp(packet, timeout=2, verbose=0, retry=2)
         if answered:
             return answered[0][1].hwsrc
         else:
@@ -228,10 +228,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
-
-
-
-
-
-
 
