@@ -86,7 +86,7 @@ class NetRaptorApp:
         self.root.destroy()  # close the GUI
     
     def get_mac(self, ip):
-        # Send ARP request to get MAC address of given IP"""
+        # Send ARP request to get MAC address of given IP
         arp_request = ARP(pdst=ip)
         broadcast = Ether(dst="ff:ff:ff:ff:ff:ff")
         packet = broadcast / arp_request
@@ -228,5 +228,6 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
