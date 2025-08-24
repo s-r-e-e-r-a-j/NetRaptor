@@ -10,6 +10,8 @@ from scapy.layers.l2 import ARP, Ether
 from scapy.sendrecv import srp, send
 import threading
 import time
+import sys
+import os
 
 # Enable IP forwarding (Linux systems)
 def enable_ip_forwarding():
@@ -20,6 +22,13 @@ def disable_ip_forwarding():
     if os.name == 'posix':
         os.system("echo 0 > /proc/sys/net/ipv4/ip_forward")
 
+def check_root():
+    if os.geteuid() != 0:
+       print("[!] Please run as root or with sudo")
+       sys.exit(1)
+    else:
+         return True
+        
 # Define the main application class
 class NetRaptorApp:
     def __init__(self, root):
@@ -212,6 +221,8 @@ class NetRaptorApp:
        
 # Main application window
 if __name__ == "__main__":
+    check_root()
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
