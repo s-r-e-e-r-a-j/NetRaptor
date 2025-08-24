@@ -34,7 +34,6 @@ class NetRaptorApp:
         self.root = root
         self.root.title("NetRaptor - ARP Poisoning Tool")
         self.root.geometry("500x500")
-        self.root.protocol("WM_DELETE_WINDOW", self.on_close)
         
         # Title Label
         tk.Label(root, text="NetRaptor", font=("Helvetica", 18, "bold")).pack(pady=10)
@@ -80,10 +79,6 @@ class NetRaptorApp:
         self.hosts = []
         self.attack_thread = None
         self.running = False
-
-    def on_close(self):
-        self.stop_attack()   # stop any running attack
-        self.root.destroy()  # close the GUI
     
     def get_mac(self, ip):
         # Send ARP request to get MAC address of given IP
@@ -228,6 +223,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
 
