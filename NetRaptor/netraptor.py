@@ -11,7 +11,6 @@ from scapy.sendrecv import srp, send
 import threading
 import time
 import sys
-import os
 
 # Enable IP forwarding (Linux systems)
 def enable_ip_forwarding():
@@ -225,4 +224,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NetRaptorApp(root)
     root.mainloop()
+
 
