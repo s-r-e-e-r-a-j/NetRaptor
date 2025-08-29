@@ -30,9 +30,6 @@ NetRaptor is developed strictly for educational purposes and authorized penetrat
   ## Installation 
 
 1. **Clone the Repository:**
-
-  
-
   ```bash
   git clone https://github.com/s-r-e-e-r-a-j/NetRaptor.git
   ```
