@@ -18,7 +18,7 @@ gateway ip is your router ipaddress
 NetRaptor is developed strictly for educational purposes and authorized penetration testing only. Using this tool to perform ARP poisoning or Man-in-the-Middle (MITM) attacks on networks without explicit permission is illegal and unethical. The author does not take any responsibility for misuse of this tool. By using NetRaptor, you agree that you are solely responsible for your actions and will only use it in controlled environments, such as labs or systems for which you have explicit authorization.
 
 ## Compatibility
-- Linux (Debian, RedHat, Arch)
+- Linux (Debian, RHEL, Arch)
   
 ## Requirements
 - **Python 3.x**
